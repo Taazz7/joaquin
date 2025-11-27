@@ -294,6 +294,91 @@ body {
 }
 
 /*style equipo*/
+
+/* Contenedor de tarjetas del equipo */
+.cards-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 15px;
+}
+
+/* Grid responsive: 1 columna en móvil, 2 en tablet, 3 en desktop */
+@media (min-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tarjeta base (coherente con .card existente) */
+.card {
+  background: #000000;
+  color: #F4FA57;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid rgba(244, 250, 87, 0.25);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover sutil para dar vida */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Imagen dentro de la tarjeta */
+.cards-container .card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5; 
+  object-fit: cover;  
+  background: #111; 
+}
+
+/* Ajuste en pantallas muy grandes: imágenes más contenidas */
+@media (min-width: 1200px) {
+  .cards-container .card img {
+    max-width: 350px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Opcional: marco ligero alrededor de la imagen para contraste */
+.cards-container .card img {
+  border-bottom: 1px solid rgba(244, 250, 87, 0.15);
+}
+
+/* Espaciado interno para futuras descripciones o nombres del jugador */
+.card__body {
+  padding: 15px;
+}
+
+/* Botón/acción (si se añade más adelante) coherente con la línea visual */
+.card__btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(to right, #000000, #F4FA57);
+  text-align: center;
+  transition: opacity 0.25s ease;
+}
+
+.card__btn:hover {
+  opacity: 0.85;
+}
+
 /*style jugador*/
 
 /*# sourceMappingURL=index.css.map */
