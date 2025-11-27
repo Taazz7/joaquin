@@ -17,6 +17,8 @@ body {
 
 /* HEADER */
 .header {
+  max-width: 1200px;
+  margin: 0 auto;
   background: #611979;
   color: #F4FA57;
   min-height: 100px;
@@ -76,6 +78,7 @@ body {
 
 /* SLIDER */
 .slider {
+  padding-top: 5px;
   max-height: 500px;
   margin: 0 auto;
   position: relative;
@@ -116,6 +119,11 @@ body {
 }
 
 /* GAME CARDS */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .games {
   padding: 15px;
 }
@@ -165,5 +173,7 @@ body {
     margin: 0 auto; /* centrar */
   }
 }
+/*style equipo*/
+/*style jugador*/
 
 /*# sourceMappingURL=index.css.map */

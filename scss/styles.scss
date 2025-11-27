@@ -23,7 +23,8 @@ body {
 
 /* HEADER */
 .header {
-  
+  max-width: 1200px;
+  margin: 0 auto;
   background: $color-primary;
   color: $color-light;
   min-height: 100px;
@@ -88,6 +89,7 @@ body {
 
 /* SLIDER */
 .slider {
+  padding-top: 5px;
   max-height: 500px;   // controla el alto total
   margin: 0 auto;     // centrar
   position: relative;
@@ -135,6 +137,12 @@ body {
 
 
 /* GAME CARDS */
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
 .games {
   padding: 15px;
   &__title {
