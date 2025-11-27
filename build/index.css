@@ -18,30 +18,32 @@ body {
 /* HEADER */
 .header {
   background: #611979;
-  min-height: 100px;
+  min-height: 60px;
 }
 .header__container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 100px;
+  min-height: 60px;
+  padding: 0 1.5rem;
 }
 .header__brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 200px;
+  width: auto;
 }
 .header__logo {
-  width: 50px;
+  width: 40px;
 }
 .header__title {
   color: #F4FA57;
+  font-size: 1rem;
 }
 .header__menu {
-  margin-right: 10px;
+  margin-right: 0;
   background: none;
   border: none;
   display: flex;
@@ -51,9 +53,35 @@ body {
   cursor: pointer;
 }
 .header__menu-line {
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   background: #F4FA57;
+}
+.header {
+  /* Ajustes para pantallas más grandes */
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 100px;
+  }
+  .header__container {
+    max-width: 1200px;
+    min-height: 100px;
+    padding: 0;
+  }
+  .header__brand {
+    width: 200px;
+  }
+  .header__logo {
+    width: 50px;
+  }
+  .header__title {
+    font-size: 1.2rem;
+  }
+  .header__menu-line {
+    width: 25px;
+    height: 3px;
+  }
 }
 
 /* NAV */
@@ -293,35 +321,31 @@ body {
   opacity: 0.8;
 }
 
-/*style equipo*/
-/* Subtítulo para secciones del equipo */
+/* style equipo */
 .Subtitulo {
   font-size: 1.4rem;
   font-weight: 600;
   color: #611979;
   text-align: center;
-  margin: 1.5rem 0;               
+  margin: 1.5rem 0;
   letter-spacing: 1px;
   text-transform: uppercase;
+  /* Variante en pantallas grandes */
 }
-
-/* Variante en pantallas grandes */
 @media (min-width: 768px) {
   .Subtitulo {
     font-size: 1.6rem;
   }
 }
 
-/* Contenedor de tarjetas del equipo */
 .cards-container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
   display: grid;
   gap: 15px;
+  /* Grid responsive */
 }
-
-/* Grid responsive: 1 columna en móvil, 2 en tablet, 3 en desktop */
 @media (min-width: 480px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -332,9 +356,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* Tarjeta base (coherente con .card existente) */
-.card {
+.cards-container .card {
   background: #000000;
   color: #F4FA57;
   border-radius: 10px;
@@ -344,23 +366,19 @@ body {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* Hover sutil para dar vida */
-.card:hover {
+.cards-container .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
 }
-
-/* Imagen dentro de la tarjeta */
 .cards-container .card img {
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 5; 
-  object-fit: cover;  
-  background: #111; 
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  background: #111;
+  border-bottom: 1px solid rgba(244, 250, 87, 0.15);
+  /* Ajuste en pantallas muy grandes */
 }
-
-/* Ajuste en pantallas muy grandes: imágenes más contenidas */
 @media (min-width: 1200px) {
   .cards-container .card img {
     max-width: 350px;
@@ -368,19 +386,10 @@ body {
     width: 100%;
   }
 }
-
-/* Opcional: marco ligero alrededor de la imagen para contraste */
-.cards-container .card img {
-  border-bottom: 1px solid rgba(244, 250, 87, 0.15);
-}
-
-/* Espaciado interno para futuras descripciones o nombres del jugador */
-.card__body {
+.cards-container .card__body {
   padding: 15px;
 }
-
-/* Botón/acción (si se añade más adelante) coherente con la línea visual */
-.card__btn {
+.cards-container .card__btn {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -391,12 +400,10 @@ body {
   text-align: center;
   transition: opacity 0.25s ease;
 }
-
-.card__btn:hover {
+.cards-container .card__btn:hover {
   opacity: 0.85;
 }
 
-/*style jugador*/
 /*style jugador*/
 .player {
   max-width: 1200px;

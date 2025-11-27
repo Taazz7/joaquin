@@ -24,35 +24,37 @@ body {
 /* HEADER */
 .header {
   background: $color-primary;
-  min-height: 100px;
-  
-  // Wrapper interno para contener los elementos
+  min-height: 60px; // más compacto en móvil
+
+  // Wrapper interno
   &__container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 100px;
+    min-height: 60px;
+    padding: 0 1.5rem; // margen lateral en móvil
   }
 
   &__brand {
     display: flex;
     align-items: center;
     gap: .5rem;
-    width: 200px;
+    width: auto; // más flexible en móvil
   }
 
   &__logo {
-    width: 50px;
+    width: 40px; // logo más pequeño en móvil
   }
 
-  &__title{
+  &__title {
     color: #F4FA57;
+    font-size: 1rem; // tamaño reducido en móvil
   }
 
   &__menu {
-    margin-right: 10px;
+    margin-right: 0;
     background: none;
     border: none;
     display: flex;
@@ -63,11 +65,40 @@ body {
   }
 
   &__menu-line {
-    width: 25px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
     background: $color-light;
   }
+
+  /* Ajustes para pantallas más grandes */
+  @media (min-width: 768px) {
+    min-height: 100px;
+
+    &__container {
+      max-width: 1200px;
+      min-height: 100px;
+      padding: 0; // quitamos padding extra
+    }
+
+    &__brand {
+      width: 200px;
+    }
+
+    &__logo {
+      width: 50px;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__menu-line {
+      width: 25px;
+      height: 3px;
+    }
+  }
 }
+
 
 /* NAV */
 .nav {
@@ -337,8 +368,89 @@ body {
 }
 
 
-/*style equipo*/
+/* style equipo */
+.Subtitulo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #611979;
+  text-align: center;
+  margin: 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
+  /* Variante en pantallas grandes */
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.cards-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 15px;
+
+  /* Grid responsive */
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    background: #000000;
+    color: #F4FA57;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid rgba(244, 250, 87, 0.25);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #111;
+      border-bottom: 1px solid rgba(244, 250, 87, 0.15);
+
+      /* Ajuste en pantallas muy grandes */
+      @media (min-width: 1200px) {
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    &__body {
+      padding: 15px;
+    }
+
+    &__btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(to right, #000000, #F4FA57);
+      text-align: center;
+      transition: opacity 0.25s ease;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
 
 
 
