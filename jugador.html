@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="./build/index.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+    <div class="header__container">
+      <div class="header__brand">
+        <img src="img/logo.png" alt="Logo Mamba Team" class="header__logo">
+        <h1 class="header__title">Mamba Team</h1>
+      </div>
+  
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="equipo.html">Equipo</a></li>
+          <li class="nav__item"><a class="nav__link" href="jugador.html">Jugador</a></li>
+        </ul>
+      </nav>
+  
+      <button class="header__menu">
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PLAYER PROFILE -->
+  <main class="main">
+    <section class="player">
+      <h2 class="player__title">Jorge García</h2>
+      <h4 class="player__team">NACIONAL A1</h4>
+
+      <div class="player__content">
+        
+        <!-- Foto y Posición -->
+        <div class="player__left">
+          <img 
+            src="img/4-removebg-preview.png" 
+            alt="Jorge García" 
+            class="player__photo"
+          >
+          <div class="player__position">
+            Base/Escolta
+          </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="player__right">
+          
+          <div class="player__stat">
+            <span class="player__stat-label">PUNTOS POR PARTIDO:</span>
+            <span class="player__stat-value">23,3 </span>
+          </div>
+
+          <div class="player__stat">
+            <span class="player__stat-label">REBOTES POR PARTIDO:</span>
+            <span class="player__stat-value">7.9</span>
+          </div>
+
+          <div class="player__stat">
+            <span class="player__stat-label">ASISTENCIAS POR PARTIDO:</span>
+            <span class="player__stat-value">8.1</span>
+          </div>
+
+          <div class="player__stat">
+            <span class="player__stat-label">MINUTOS POR PARTIDO:</span>
+            <span class="player__stat-value">24:37</span>
+          </div>
+
+          <div class="player__stat">
+            <span class="player__stat-label">VALORACIÓN POR PARTIDO:</span>
+            <span class="player__stat-value">20.5</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__container">
+    
+    <div class="footer__section">
+        <div class="footer__brand">
+        <img src="img/logo.png" alt="Logo Mamba Team" class="footer__logo">
+        <h3 class="footer__title">Mamba Team</h3>
+        </div>
+        <p class="footer__description">
+        Tu equipo de baloncesto de confianza. Pasión, dedicación y trabajo en equipo.
+        </p>
+    </div>
+
+    <div class="footer__section">
+        <h4 class="footer__heading">Enlaces rápidos</h4>
+        <ul class="footer__list">
+        <li class="footer__item"><a class="footer__link" href="index.html">Home</a></li>
+        <li class="footer__item"><a class="footer__link" href="equipo.html">Equipo</a></li>
+        <li class="footer__item"><a class="footer__link" href="jugador.html">Jugador</a></li>
+        <li class="footer__item"><a class="footer__link" href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="footer__section">
+        <h4 class="footer__heading">Síguenos</h4>
+        <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+            <span>📷</span>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Facebook">
+            <span>📘</span>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Twitter">
+            <span>🐦</span>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="WhatsApp">
+            <span>💬</span>
+        </a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="footer__bottom">
+    <div class="footer__container">
+        <p class="footer__copyright">
+        &copy; 2015 Mamba Team. Todos los derechos reservados.
+        </p>
+    </div>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
