@@ -294,6 +294,23 @@ body {
 }
 
 /*style equipo*/
+/* Subtítulo para secciones del equipo */
+.Subtitulo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #611979;
+  text-align: center;
+  margin: 1.5rem 0;               
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Variante en pantallas grandes */
+@media (min-width: 768px) {
+  .Subtitulo {
+    font-size: 1.6rem;
+  }
+}
 
 /* Contenedor de tarjetas del equipo */
 .cards-container {
