@@ -1,0 +1,27 @@
+/* NAV */
+.nav {
+    display: none;
+    
+    @include responsive(tablet) {
+      display: block;
+      justify-items: right;
+      width: 100%; 
+      margin-right: 25px;
+  
+      &__list {
+        display: flex;
+        gap: $spacing-sm;
+        list-style: none;
+      }
+  
+      &__link {
+        color: $color-light;
+        text-decoration: none;
+        padding: $spacing-xs $spacing-sm;
+        background: linear-gradient(to right, $color-dark, $color-light);
+        border-radius: 6px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    }
+  }

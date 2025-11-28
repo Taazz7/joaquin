@@ -1,0 +1,16 @@
+/* UTILITIES */
+
+/* Subtitle */
+.Subtitulo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-primary;
+    text-align: center;
+    margin: $spacing-md 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  
+    @include responsive(tablet) {
+      font-size: 1.6rem;
+    }
+  }

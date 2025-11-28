@@ -1,0 +1,14 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: $font-family-base;
+    src: url('/Jersey25-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    background: #f3f3f3;
+  }

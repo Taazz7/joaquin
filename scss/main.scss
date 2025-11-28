@@ -1,0 +1,21 @@
+/* MAIN SCSS - Archivo principal que importa todos los módulos */
+
+// 1. Configuración base
+@import 'variables';
+@import 'mixins';
+
+// 2. Reset y estilos base
+@import 'reset';
+
+// 3. Layout
+@import 'header';
+@import 'nav';
+@import 'footer';
+
+// 4. Componentes
+@import 'slider';
+@import 'cards';
+@import 'player';
+
+// 5. Utilidades
+@import 'utilities';

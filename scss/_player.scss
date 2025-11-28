@@ -1,0 +1,93 @@
+/* PLAYER */
+.player {
+    @include center-content;
+    padding: $spacing-lg $spacing-sm;
+  
+    &__title {
+      text-align: center;
+      color: $color-primary;
+      font-size: $font-size-xxl;
+      margin-bottom: $spacing-sm;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    &__team {
+      text-align: center;
+      color: $color-primary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-xl;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+      align-items: start;
+  
+      @include responsive(tablet) {
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+  
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+  
+    &__photo {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  
+    &__position {
+      background-color: #d1d1d1;
+      padding: $spacing-sm;
+      text-align: center;
+      font-size: $font-size-lg;
+      font-weight: bold;
+      border-radius: 5px;
+      text-transform: uppercase;
+      color: $color-dark;
+    }
+  
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      margin-top: 70px;
+    }
+  
+    &__stat {
+      padding-top: 15px;
+      background-color: #d1d1d1;
+      padding: 1.7rem $spacing-md;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include transition;
+  
+      &:hover {
+        background-color: #c0c0c0;
+        transform: translateX(5px);
+      }
+    }
+  
+    &__stat-label {
+      color: $color-dark;
+      font-weight: bold;
+    }
+  
+    &__stat-value {
+      font-weight: bold;
+      color: $color-primary;
+      font-size: 1.3rem;
+    }
+  }

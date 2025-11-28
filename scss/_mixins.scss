@@ -1,0 +1,45 @@
+/* MIXINS Y FUNCIONES */
+
+// Mixin para Media Queries
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (min-width: $breakpoint-mobile) {
+        @content;
+      }
+    } @else if $breakpoint == tablet {
+      @media (min-width: $breakpoint-tablet) {
+        @content;
+      }
+    } @else if $breakpoint == desktop {
+      @media (min-width: $breakpoint-desktop) {
+        @content;
+      }
+    }
+  }
+  
+  // Mixin para centrar contenido
+  @mixin center-content {
+    max-width: $max-width-container;
+    margin: 0 auto;
+  }
+  
+  // Mixin para flex center
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Mixin para transiciones
+  @mixin transition($properties: all, $duration: 0.3s, $timing: ease) {
+    transition: $properties $duration $timing;
+  }
+  
+  // Mixin para hover effect
+  @mixin hover-lift($distance: -4px) {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    
+    &:hover {
+      transform: translateY($distance);
+    }
+  }

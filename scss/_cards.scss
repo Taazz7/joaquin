@@ -1,0 +1,124 @@
+/* GAME CARDS */
+.main {
+    @include center-content;
+  }
+  
+  .games {
+    @include center-content;
+    padding: 15px;
+  
+    &__title {
+      margin-bottom: $spacing-sm;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+  
+  .cards {
+    display: grid;
+    gap: 15px;
+  
+    @include responsive(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .card {
+    background: $color-dark;
+    color: $color-light;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+  
+    &__img {
+      width: 100%;
+      display: block;
+      max-height: 650px;
+      object-fit: cover;
+    }
+  
+    &__body {
+      padding: 15px;
+    }
+  
+    &__btn {
+      text-align: center;
+      color: $color-light;
+    }
+  }
+  
+  @include responsive(desktop) {
+    .card__img {
+      width: 350px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Cards Container (Team Page) */
+  .cards-container {
+    @include center-content;
+    margin: $spacing-lg auto;
+    padding: 0 $spacing-sm;
+    display: grid;
+    gap: 15px;
+  
+    @include responsive(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include responsive(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .card {
+      background: $color-dark;
+      color: $color-light;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+      border: 1px solid rgba(244, 250, 87, 0.25);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+      @include hover-lift;
+  
+      &:hover {
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+      }
+  
+      img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        background: #111;
+        border-bottom: 1px solid rgba(244, 250, 87, 0.15);
+  
+        @include responsive(desktop) {
+          max-width: 350px;
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+  
+      &__body {
+        padding: 15px;
+      }
+  
+      &__btn {
+        display: inline-block;
+        margin-top: $spacing-xs;
+        padding: $spacing-xs 0.75rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #ffffff;
+        background: linear-gradient(to right, $color-dark, $color-light);
+        text-align: center;
+        @include transition(opacity, 0.25s);
+  
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }

@@ -1,0 +1,30 @@
+/* VARIABLES */
+$color-primary: #611979;
+$color-dark: #000000;
+$color-light: #F4FA57;
+
+/* Breakpoints */
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+/* Spacing */
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+/* Typography */
+$font-family-base: 'Jersey25';
+$font-size-base: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2.5rem;
+
+/* Dimensions */
+$max-width-container: 1200px;
+$header-height-mobile: 60px;
+$header-height-desktop: 100px;
+$slider-height: 500px;
