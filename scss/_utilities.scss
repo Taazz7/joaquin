@@ -7,10 +7,10 @@
     color: $color-primary;
     text-align: center;
     margin: $spacing-md 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 1px; // Separación entre letras
+    text-transform: uppercase; // TODO EN MAYÚSCULAS
   
     @include responsive(tablet) {
-      font-size: 1.6rem;
+      font-size: 1.6rem; // Más grande en desktop
     }
   }

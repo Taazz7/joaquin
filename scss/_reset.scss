@@ -1,13 +1,13 @@
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; // Elimina márgenes por defecto
+    padding: 0; // Elimina rellenos por defecto
+    box-sizing: border-box; // Incluye un border en el ancho total
   }
   
   body {
-    font-family: $font-family-base;
-    src: url('/Jersey25-Regular.ttf') format('truetype');
+    font-family: $font-family-base; // Aplica fuente personalizada
+    src: url('/Jersey25-Regular.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
     background: #f3f3f3;

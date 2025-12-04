@@ -1,16 +1,16 @@
 /* NAV */
 .nav {
-    display: none;
+    display: none; // OCULTO en móvil 
     
     @include responsive(tablet) {
-      display: block;
+      display: block; // VISIBLE en tablet/desktop
       justify-items: right;
       width: 100%; 
       margin-right: 25px;
   
       &__list {
-        display: flex;
-        gap: $spacing-sm;
+        display: flex; // Links en fila horizontal
+        gap: $spacing-sm; // Espacio
         list-style: none;
       }
   

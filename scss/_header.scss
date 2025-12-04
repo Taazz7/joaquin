@@ -1,7 +1,7 @@
 /* HEADER */
 .header {
-    background: $color-primary;
-    min-height: $header-height-mobile;
+    background: $color-primary; // Fondo morado
+    min-height: $header-height-mobile; // Altura mínima en móvil
   
     &__container {
       max-width: 100%;
@@ -21,7 +21,7 @@
     }
   
     &__logo {
-      width: 40px;
+      width: 40px; // Tamaño pequeño en móvil
     }
   
     &__title {
@@ -40,7 +40,7 @@
       cursor: pointer;
     }
   
-    &__menu-line {
+    &__menu-line { //Boton hamburguesa
       width: 20px;
       height: 2px;
       background: $color-light;
