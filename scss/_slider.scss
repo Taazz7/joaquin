@@ -1,43 +1,43 @@
 /* SLIDER */
 .slider {
     padding-top: 5px;
-    max-height: $slider-height;
+    max-height: $slider-height;  // Limita la altura
     margin: 0 auto;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; // Oculta imágenes fuera del área
   
     &__content {
-      display: flex;
+      display: flex; // Imágenes en fila horizontal
       transition: transform 0.6s ease;
     }
   
     &__img {
       height: $slider-height;
-      object-fit: cover;
+      object-fit: cover; // Recorta sin deformar
       width: 100%;
-      flex-shrink: 0;
+      flex-shrink: 0; // No se comprime mantiene el ancho
     }
   
     &__btn {
-      position: absolute;
-      top: 50%;
+      position: absolute; // Flota sobre las imágenes
+      top: 50%; // Centrado vertical
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.4); // Fondo negro
       border: none;
       padding: 10px 15px;
       color: white;
       cursor: pointer;
       font-size: 22px;
-      border-radius: 50%;
+      border-radius: 50%; // Botón circular
       z-index: 10;
   
       &--prev {
-        left: 10px;
+        left: 10px; // Izquierda
       }
   
       &--next {
-        right: 10px;
+        right: 10px; // Derecha
       }
   
       &:hover {

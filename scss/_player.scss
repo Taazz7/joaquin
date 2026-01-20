@@ -8,8 +8,8 @@
       color: $color-primary;
       font-size: $font-size-xxl;
       margin-bottom: $spacing-sm;
-      text-transform: uppercase;
-      font-weight: bold;
+      text-transform: uppercase; // TODO EN MAYÚSCULAS
+      font-weight: bold; // Negrita
     }
   
     &__team {
@@ -23,12 +23,12 @@
   
     &__content {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; // 1 columna en móvil
       gap: $spacing-lg;
       align-items: start;
   
       @include responsive(tablet) {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr; // 2 columnas: foto + stats
       }
     }
   
@@ -76,7 +76,7 @@
   
       &:hover {
         background-color: #c0c0c0;
-        transform: translateX(5px);
+        transform: translateX(5px); // Se mueve a la derecha
       }
     }
   
@@ -87,7 +87,7 @@
   
     &__stat-value {
       font-weight: bold;
-      color: $color-primary;
-      font-size: 1.3rem;
+      color: $color-primary; // Números destacados en morado
+      font-size: 1.3rem; // Más grandes que la etiqueta
     }
   }
