@@ -50,6 +50,7 @@
     }
   
     &__heading {
+      justify-content: right;
       font-size: $font-size-lg;
       margin: 0 0 $spacing-xs 0;
       font-weight: 600;
